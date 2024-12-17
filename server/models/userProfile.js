@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const userProfileSchema = new mongoose.Schema({
     userID: { type: mongoose.Schema.Types.ObjectId, ref: 'Users', required: true },
@@ -15,4 +15,4 @@ const userProfileSchema = new mongoose.Schema({
     interactionData: { type: Object }
 });
 
-export default mongoose.model('UserProfile', userProfileSchema);
+module.exports = mongoose.model('UserProfile', userProfileSchema);

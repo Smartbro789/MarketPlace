@@ -5,3 +5,7 @@ export * as ProductsController from "./ProductsController.js";
 export * as userProfileController from "./userProfileController.js";
 export * as RecommendationsController from "./RecommendationsController.js";
 export * as ReviewsController from "./ReviewsController.js";
+export * as CartController from "./CartController.js";
+export * as CheckoutController from "./CheckoutController.js";
+export * as ComparisonController from "./ComparisonController.js";
+export * as FavoritesController from "./FavoritesController.js";

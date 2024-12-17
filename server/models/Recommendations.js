@@ -1,8 +1,9 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const recommendationSchema = new mongoose.Schema({
-    algorithmType: { type: String, required: true },
-    parameters: { type: Object }
+    userID: { type: mongoose.Schema.Types.ObjectId, ref: 'Users', required: true },
+    productID: { type: mongoose.Schema.Types.ObjectId, ref: 'Products', required: true },
+    score: { type: Number, required: true },
 });
 
-export default mongoose.model('Recommendations', recommendationSchema);
+module.exports = mongoose.model('Recommendations', recommendationSchema);
